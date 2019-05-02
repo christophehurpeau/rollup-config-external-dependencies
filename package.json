@@ -1,0 +1,60 @@
+{
+  "name": "rollup-config-external-dependencies",
+  "version": "0.3.0",
+  "description": "rollup config external dependencies",
+  "keywords": [],
+  "author": "Christophe Hurpeau <christophe@hurpeau.com> (http://christophe.hurpeau.com/)",
+  "license": "ISC",
+  "repository": "https://github.com:christophehurpeau/rollup-config-external-dependencies.git",
+  "homepage": "https://github.com/christophehurpeau/rollup-config-external-dependencies",
+  "engines": {
+    "node": ">=6.5.0"
+  },
+  "main": "./lib/index.js",
+  "scripts": {
+    "lint": "eslint --quiet lib/",
+    "preversion": "yarn run lint && repository-check-dirty",
+    "release": "repository-check-dirty && pob-release",
+    "version": "pob-version"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS",
+      "post-checkout": "yarnhook",
+      "post-merge": "yarnhook",
+      "post-rewrite": "yarnhook",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "yarn.lock": ["yarn-update-lock", "git add"],
+    "{package.json,.eslintrc.json}": [
+      "prettier --parser json --write",
+      "git add"
+    ],
+    "lib/**/*.json": ["prettier --parser json --write", "git add"],
+    "lib/**/*.js": ["eslint --fix --quiet", "git add"]
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "singleQuote": true,
+    "arrowParens": "always"
+  },
+  "commitlint": {
+    "extends": ["@commitlint/config-conventional"]
+  },
+  "devDependencies": {
+    "@commitlint/cli": "7.5.2",
+    "@commitlint/config-conventional": "7.5.0",
+    "@pob/eslint-config": "31.0.0",
+    "@pob/eslint-config-node": "31.0.0",
+    "eslint": "5.16.0",
+    "husky": "2.1.0",
+    "lint-staged": "8.1.5",
+    "pob-release": "4.13.1",
+    "prettier": "1.17.0",
+    "repository-check-dirty": "1.0.2",
+    "yarn-update-lock": "0.6.1",
+    "yarnhook": "0.4.0"
+  }
+}
