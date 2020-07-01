@@ -51,9 +51,9 @@
     "eslint": "5.16.0",
     "husky": "2.7.0",
     "lint-staged": "8.1.5",
-    "pob-release": "4.13.1",
-    "prettier": "1.17.0",
-    "repository-check-dirty": "1.0.2",
+    "pob-release": "4.15.2",
+    "prettier": "1.19.1",
+    "repository-check-dirty": "1.2.2",
     "yarn-update-lock": "0.6.1",
     "yarnhook": "0.4.0"
   }
