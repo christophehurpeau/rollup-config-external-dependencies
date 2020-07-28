@@ -8,53 +8,58 @@
   "repository": "https://github.com:christophehurpeau/rollup-config-external-dependencies.git",
   "homepage": "https://github.com/christophehurpeau/rollup-config-external-dependencies",
   "engines": {
-    "node": ">=6.5.0"
+    "node": ">=10.13.0"
   },
   "main": "./lib/index.js",
   "scripts": {
-    "lint": "eslint --quiet lib/",
+    "generate:test-coverage": "rm -Rf docs/coverage/ ; NODE_ENV=production BABEL_ENV=test jest --coverage --coverageReporters=pob-lcov-reporter --coverageDirectory=docs/coverage/",
+    "lint": "eslint --quiet *.js lib",
     "preversion": "yarn run lint && repository-check-dirty",
     "release": "repository-check-dirty && pob-release",
+    "test": "jest",
+    "test:watch": "jest",
     "version": "pob-version"
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -e $HUSKY_GIT_PARAMS",
-      "post-checkout": "yarnhook",
-      "post-merge": "yarnhook",
-      "post-rewrite": "yarnhook",
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "yarn.lock": ["yarn-update-lock", "git add"],
-    "{package.json,.eslintrc.json}": [
-      "prettier --parser json --write",
-      "git add"
-    ],
-    "lib/**/*.json": ["prettier --parser json --write", "git add"],
-    "lib/**/*.js": ["eslint --fix --quiet", "git add"]
-  },
   "prettier": {
-    "trailingComma": "es5",
+    "trailingComma": "all",
     "singleQuote": true,
     "arrowParens": "always"
   },
   "commitlint": {
-    "extends": ["@commitlint/config-conventional"]
+    "extends": [
+      "@pob/commitlint-config"
+    ]
   },
+  "jest": {
+    "cacheDirectory": "./node_modules/.cache/jest",
+    "testMatch": [
+      "<rootDir>/lib/**/__tests__/**/*.js",
+      "<rootDir>/lib/**/*.test.js"
+    ],
+    "collectCoverageFrom": [
+      "lib/**/*.js"
+    ],
+    "moduleFileExtensions": [
+      "js"
+    ]
+  },
+  "pob": {},
   "devDependencies": {
-    "@commitlint/cli": "7.5.2",
-    "@commitlint/config-conventional": "7.5.0",
-    "@pob/eslint-config": "31.0.0",
-    "@pob/eslint-config-node": "31.0.0",
-    "eslint": "5.16.0",
-    "husky": "2.7.0",
-    "lint-staged": "8.1.5",
-    "pob-release": "4.13.1",
-    "prettier": "1.17.0",
-    "repository-check-dirty": "1.0.2",
-    "yarn-update-lock": "0.6.1",
-    "yarnhook": "0.4.0"
+    "@pob/commitlint-config": "1.1.2",
+    "@pob/eslint-config": "39.0.0",
+    "@pob/eslint-config-node": "39.0.0",
+    "@pob/root": "2.2.2",
+    "@types/jest": "25.2.3",
+    "eslint": "7.5.0",
+    "eslint-import-resolver-node": "0.3.4",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "eslint-plugin-unicorn": "21.0.0",
+    "husky": "4.2.5",
+    "jest": "26.1.0",
+    "pob-lcov-reporter": "2.4.0",
+    "pob-release": "5.6.2",
+    "prettier": "2.0.5"
   }
 }

@@ -1,21 +1,18 @@
 {
-  "rollup-config-external-dependencies": {
-    "type": {
-      "type": "lib"
-    }
-  },
   "pob": {
     "renovate": {
       "enable": true
     },
     "pob-config": {
-      "entries": [
-        "index"
-      ],
-      "withReact": false,
       "documentation": false,
-      "testing": false,
-      "envs": []
+      "testing": {
+        "ci": true,
+        "codecov": true
+      }
+    },
+    "project": {
+      "type": "lib",
+      "yarn2": false
     }
   }
 }
