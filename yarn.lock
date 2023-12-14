@@ -6055,9 +6055,9 @@ __metadata:
   linkType: hard
 
 "trim-newlines@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "trim-newlines@npm:3.0.0"
-  checksum: 8a0c73d6a33f0a281008411d74b8732ed24681c36b0ab109aa559037740c2fc3ee534d5d78a38ec5378844df94acfd35524a8fc327141e9605c17b44cbc6bd5d
+  version: 3.0.1
+  resolution: "trim-newlines@npm:3.0.1"
+  checksum: 03cfefde6c59ff57138412b8c6be922ecc5aec30694d784f2a65ef8dcbd47faef580b7de0c949345abdc56ec4b4abf64dd1e5aea619b200316e471a3dd5bf1f6
   languageName: node
   linkType: hard
 
