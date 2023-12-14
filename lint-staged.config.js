@@ -1,5 +1,3 @@
-'use strict';
+import createLintStagedConfig from '@pob/root/createLintStagedConfig';
 
-const createLintStagedConfig = require('@pob/root/createLintStagedConfig');
-
-module.exports = createLintStagedConfig();
+export default createLintStagedConfig();
