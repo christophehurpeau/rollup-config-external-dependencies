@@ -52,7 +52,7 @@
     "@types/jest": "25.2.3",
     "eslint": "7.5.0",
     "eslint-import-resolver-node": "0.3.4",
-    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-import": "2.29.1",
     "eslint-plugin-node": "11.1.0",
     "eslint-plugin-prettier": "3.1.4",
     "eslint-plugin-unicorn": "21.0.0",
