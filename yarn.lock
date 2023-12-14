@@ -3196,9 +3196,9 @@ __metadata:
   linkType: hard
 
 "hosted-git-info@npm:^2.1.4":
-  version: 2.7.1
-  resolution: "hosted-git-info@npm:2.7.1"
-  checksum: bbdf29914f644a907db9dc4fe722832c817e01305b9dfbb2aef319417ec7fbba52ad96728bbb77c19b9f894f8802efc454b5e2b5ef420143a46fa72a94d3e9dd
+  version: 2.8.9
+  resolution: "hosted-git-info@npm:2.8.9"
+  checksum: 317cbc6b1bbbe23c2a40ae23f3dafe9fa349ce42a89a36f930e3f9c0530c179a3882d2ef1e4141a4c3674d6faaea862138ec55b43ad6f75e387fda2483a13c70
   languageName: node
   linkType: hard
 
