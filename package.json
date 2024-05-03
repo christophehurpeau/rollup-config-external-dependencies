@@ -8,7 +8,7 @@
   "repository": "https://github.com/christophehurpeau/rollup-config-external-dependencies.git",
   "homepage": "https://github.com/christophehurpeau/rollup-config-external-dependencies",
   "type": "module",
-  "packageManager": "yarn@4.1.1",
+  "packageManager": "yarn@4.2.1",
   "engines": {
     "node": ">=18.12.0"
   },
