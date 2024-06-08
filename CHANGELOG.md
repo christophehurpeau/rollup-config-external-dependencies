@@ -3,6 +3,11 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.0.1](https://github.com/christophehurpeau/rollup-config-external-dependencies/compare/v3.0.0...v3.0.1) (2024-06-08)
+
+Note: no notable changes
+
+
 ## [3.0.0](https://github.com/christophehurpeau/rollup-config-external-dependencies/compare/v2.0.0...v3.0.0) (2023-12-14)
 
 
