@@ -40,12 +40,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/cli@npm:19.6.1":
-  version: 19.6.1
-  resolution: "@commitlint/cli@npm:19.6.1"
+"@commitlint/cli@npm:19.7.1":
+  version: 19.7.1
+  resolution: "@commitlint/cli@npm:19.7.1"
   dependencies:
     "@commitlint/format": "npm:^19.5.0"
-    "@commitlint/lint": "npm:^19.6.0"
+    "@commitlint/lint": "npm:^19.7.1"
     "@commitlint/load": "npm:^19.6.1"
     "@commitlint/read": "npm:^19.5.0"
     "@commitlint/types": "npm:^19.5.0"
@@ -53,7 +53,7 @@ __metadata:
     yargs: "npm:^17.0.0"
   bin:
     commitlint: cli.js
-  checksum: 10c0/fa7a344292f1d25533b195b061bcae0a80434490fae843ad28593c09668f48e9a74906b69f95d26df4152c56c71ab31a0bc169d333e22c6ca53dc54646a2ff19
+  checksum: 10c0/bb5e4f004f6b16078cdc7e7d6ff1a53762cefc1265af017ccef4ab789d2c562b75fe316ccc1751da6bc1172393f2427926c863298edda2e4d00c8323f2878f5b
   languageName: node
   linkType: hard
 
@@ -118,7 +118,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/lint@npm:^19.6.0":
+"@commitlint/lint@npm:^19.7.1":
   version: 19.7.1
   resolution: "@commitlint/lint@npm:19.7.1"
   dependencies:
@@ -311,14 +311,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@eslint/json@npm:^0.9.0":
-  version: 0.9.1
-  resolution: "@eslint/json@npm:0.9.1"
+"@eslint/json@npm:^0.10.0":
+  version: 0.10.0
+  resolution: "@eslint/json@npm:0.10.0"
   dependencies:
     "@eslint/core": "npm:^0.10.0"
     "@eslint/plugin-kit": "npm:^0.2.5"
     "@humanwhocodes/momoa": "npm:^3.3.4"
-  checksum: 10c0/156b6b9441dced9d403ada109f4eb1f21d6e5288dfd27e91f4856e8ba2a68aeb1a2da924c371966ee2894cf6104f76098d7a9e57eacd09a0b46b5edafffc316f
+    natural-compare: "npm:^1.4.0"
+  checksum: 10c0/d38bba116bc8550c3c9419b879bbe3c7814ca61a60c710472146c319636848680e76b7b436df08bf38d5f99eeeb36206fe8244a145a43fc32bbb47c5e97711bb
   languageName: node
   linkType: hard
 
@@ -632,13 +633,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pob/eslint-config@npm:59.4.0":
-  version: 59.4.0
-  resolution: "@pob/eslint-config@npm:59.4.0"
+"@pob/eslint-config@npm:59.5.0":
+  version: 59.5.0
+  resolution: "@pob/eslint-config@npm:59.5.0"
   dependencies:
     "@eslint/js": "npm:^9.16.0"
-    "@eslint/json": "npm:^0.9.0"
-    "@pob/eslint-plugin": "npm:59.4.0"
+    "@eslint/json": "npm:^0.10.0"
+    "@pob/eslint-plugin": "npm:59.5.0"
     confusing-browser-globals: "npm:^1.0.11"
     eslint-plugin-import: "npm:^2.31.0"
     eslint-plugin-n: "npm:^17.15.1"
@@ -646,13 +647,13 @@ __metadata:
     eslint-plugin-unicorn: "npm:^56.0.1"
   peerDependencies:
     eslint: ^9.9.0
-  checksum: 10c0/e9a2b3143450b6fb8374d92d9cede4ee853e6bd166904c88d5cb26bd32d42720f2e1512f3aa722331f46e9a89c69fa3975b621285a7453852cf310bebdf6453d
+  checksum: 10c0/37c5602d1c74fa4c3084ee7e8d2242afd7c535a1da1e69e1b216211f286e0418cda266e05c9017ebcaf18bc223d9c57e3933a67febb00c2dae62e9021721d7b2
   languageName: node
   linkType: hard
 
-"@pob/eslint-plugin@npm:59.4.0":
-  version: 59.4.0
-  resolution: "@pob/eslint-plugin@npm:59.4.0"
+"@pob/eslint-plugin@npm:59.5.0":
+  version: 59.5.0
+  resolution: "@pob/eslint-plugin@npm:59.5.0"
   dependencies:
     "@typescript-eslint/utils": "npm:8.18.2"
     eslint-plugin-react: "npm:^7.35.0"
@@ -662,7 +663,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 10c0/55c5b4953f228667ba28555576f0cfb67fd44c50ec41c3ecf77e456055a9456394091728b2cbfb384476270a177e8e9009d22ecfc9875488a1049270f19acccd
+  checksum: 10c0/ca0d628df2e14b43164b5f9c470fd60bf6ee26831158204632bd0e5ec9663c88dc8752a5432db34185db62d4212412c738ba912f0c5e039fad2592404e3f6dfd
   languageName: node
   linkType: hard
 
@@ -691,11 +692,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pob/root@npm:16.2.0":
-  version: 16.2.0
-  resolution: "@pob/root@npm:16.2.0"
+"@pob/root@npm:16.3.0":
+  version: 16.3.0
+  resolution: "@pob/root@npm:16.3.0"
   dependencies:
-    "@commitlint/cli": "npm:19.6.1"
+    "@commitlint/cli": "npm:19.7.1"
     "@pob/pretty-eslint-config": "npm:9.0.0"
     "@pob/pretty-pkg": "npm:12.0.0"
     conventional-changelog-conventionalcommits: "npm:^8.0.0"
@@ -703,7 +704,7 @@ __metadata:
     husky: "npm:~9.1.7"
     json5: "npm:^2.2.3"
     lint-staged: "npm:15.4.3"
-    pob-dependencies: "npm:17.2.0"
+    pob-dependencies: "npm:17.3.0"
     prettier: "npm:3.4.2"
     repository-check-dirty: "npm:10.0.0"
     semver: "npm:^7.3.7"
@@ -719,7 +720,7 @@ __metadata:
     pretty-pkg: ./bin/pretty-pkg.js
     repository-check-dirty: ./bin/repository-check-dirty.js
     yarn-version: ./bin/yarn-version.js
-  checksum: 10c0/fb93bc0d1997df7e117187ac7f90ca260bc22bdac050f40a048a46edbd0867aea0defbd649d82eee6392c3ba4a2abcb99bcbce9b3bd2d26c331adb070524e1ab
+  checksum: 10c0/6d4f8c3d4a4ece061895b5f71bac5c141fde6a683fb622b62c081bc17547f62fb96570f6903b031e764c8fb7e8c6eb2132069335ce21d991ee237a1f2e2b9320
   languageName: node
   linkType: hard
 
@@ -3985,10 +3986,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pob-dependencies@npm:17.2.0":
-  version: 17.2.0
-  resolution: "pob-dependencies@npm:17.2.0"
-  checksum: 10c0/b467e2315ec3d5d01ea911537e39058dd6b0f870563c8852695d0821b6b4ebead1d458d0ea2bfc5c79e95ce0725ea1e47608953217fd3db98c0078c7d3bfff38
+"pob-dependencies@npm:17.3.0":
+  version: 17.3.0
+  resolution: "pob-dependencies@npm:17.3.0"
+  checksum: 10c0/bce7757793fd6c539386d2d4d01972eb8c8b05dc78e6b7cd8107c72cfa83e14f3753118438cbb30ee1f3243898f96b4f93faa3e81d34afa200dcd5573e7b7e32
   languageName: node
   linkType: hard
 
@@ -4316,8 +4317,8 @@ __metadata:
   resolution: "rollup-config-external-dependencies@workspace:."
   dependencies:
     "@pob/commitlint-config": "npm:9.1.0"
-    "@pob/eslint-config": "npm:59.4.0"
-    "@pob/root": "npm:16.2.0"
+    "@pob/eslint-config": "npm:59.5.0"
+    "@pob/root": "npm:16.3.0"
     check-package-dependencies: "npm:9.1.0"
     eslint: "npm:9.19.0"
   languageName: unknown
