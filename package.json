@@ -8,9 +8,9 @@
   "repository": "https://github.com/christophehurpeau/rollup-config-external-dependencies.git",
   "homepage": "https://github.com/christophehurpeau/rollup-config-external-dependencies",
   "type": "module",
-  "packageManager": "yarn@4.2.1",
+  "packageManager": "yarn@4.6.0",
   "engines": {
-    "node": ">=18.12.0"
+    "node": ">=20.9.0"
   },
   "sideEffects": false,
   "main": "./lib/index.js",
@@ -43,10 +43,10 @@
   "pob": {},
   "prettier": "@pob/root/prettier-config",
   "devDependencies": {
-    "@pob/commitlint-config": "7.0.0",
-    "@pob/eslint-config": "58.1.0",
-    "@pob/root": "13.4.1",
-    "check-package-dependencies": "7.2.0",
-    "eslint": "9.11.1"
+    "@pob/commitlint-config": "9.1.0",
+    "@pob/eslint-config": "59.4.0",
+    "@pob/root": "16.2.0",
+    "check-package-dependencies": "9.1.0",
+    "eslint": "9.19.0"
   }
 }
