@@ -1,10 +1,6 @@
 {
-  "search.exclude": {
-    "**/.yarn": true
-  },
-
-  // set yarn as package manager to run scripts and tasks
-  "npm.packageManager": "yarn",
+  // set pnpm as package manager to run scripts and tasks
+  "npm.packageManager": "pnpm",
 
   // save config
   "editor.formatOnSave": true,
@@ -30,5 +26,5 @@
 
   // format config
   "eslint.format.enable": false,
-  "editor.defaultFormatter": "esbenp.prettier-vscode"
+  "editor.defaultFormatter": "oxc.oxc-vscode"
 }

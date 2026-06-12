@@ -3,18 +3,17 @@
     "renovate": {
       "enable": true
     },
-    "project": {
-      "type": "lib",
-      "packageManager": "yarn",
-      "yarnNodeLinker": "node-modules"
-    },
     "lib": {
       "documentation": false,
       "testing": {
-        "ci": true,
         "codecov": true,
         "runner": "node"
       }
+    },
+    "project": {
+      "type": "lib",
+      "packageManager": "pnpm",
+      "ci": true
     }
   }
 }

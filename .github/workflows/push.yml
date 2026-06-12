@@ -1,5 +1,6 @@
 name: Push CI
-
+permissions:
+  contents: read
 on: [push]
 
 jobs:
@@ -8,48 +9,52 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [20.x, 22.x]
+        node-version: [22.x, 24.x]
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          version: 11
 
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
           registry-url: "https://registry.npmjs.org"
 
-      - name: Enable Corepack
-        run: corepack enable
-
       - name: Install Dependencies
-        run: yarn install --immutable
+        run: pnpm install --frozen-lockfile
 
       - name: Checks
-        run: yarn run checks
-        if: startsWith(matrix.node-version, '22.')
+        run: pnpm run checks
+        if: startsWith(matrix.node-version, '24.')
 
-      - name: Prettier
-        run: yarn run lint:prettier
-        if: startsWith(matrix.node-version, '22.')
+      - name: Format
+        run: pnpm run format:check
+        if: startsWith(matrix.node-version, '24.')
 
       - name: Eslint
-        run: yarn run lint:eslint
-        if: startsWith(matrix.node-version, '22.')
+        run: pnpm run lint:eslint
+        if: startsWith(matrix.node-version, '24.')
 
       - name: Check nothing was forgotten before commit
-        if: startsWith(matrix.node-version, '22.')
-        run: yarn run repository-check-dirty
+        if: startsWith(matrix.node-version, '24.')
+        run: pnpm exec repository-check-dirty
 
       - name: Generate Test Coverage
-        run: yarn run test:coverage:json
-        if: startsWith(matrix.node-version, '22.')
+        run: pnpm run test:coverage:json
+        if: startsWith(matrix.node-version, '24.')
         env:
           CI: true
 
       - name: Send results to codecov
-        uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v6
         with:
           fail_ci_if_error: true
           token: ${{ secrets.CODECOV_TOKEN }}
-        if: startsWith(matrix.node-version, '22.')
+          files: ./coverage/coverage-final.json
+          disable_search: true
+        if: startsWith(matrix.node-version, '24.') && github.actor != 'dependabot[bot]'
