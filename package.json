@@ -21,22 +21,18 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "checks": "node scripts/check-package.js",
     "format": "oxfmt",
     "format:check": "oxfmt --check .",
-    "generate:test-coverage": "rm -Rf docs/coverage/ ; NODE_ENV=production BABEL_ENV=test jest --coverage --coverageReporters=pob-lcov-reporter --coverageDirectory=docs/coverage/",
     "lint": "pnpm run format && pnpm run lint:eslint",
     "lint:eslint": "eslint --quiet .",
     "prepare": "pob-root-postinstall",
-    "test": "TZ=UTC node --test lib/**/*.test.js",
-    "test:coverage": "TZ=UTC npx c8 --all --src ./lib node --test lib/**/*.test.js",
-    "test:coverage:json": "TZ=UTC npx c8 --reporter=json --all --src ./lib node --test lib/**/*.test.js",
-    "test:watch": "TZ=UTC node --test lib/**/*.test.js"
+    "test": "TZ=UTC node --test 'lib/**/*.test.js'",
+    "test:coverage": "TZ=UTC npx c8 --all --src ./lib node --test 'lib/**/*.test.js'",
+    "test:coverage:generate": "TZ=UTC npx c8 --reporter=json --all --src ./lib node --test 'lib/**/*.test.js'",
+    "test:watch": "TZ=UTC node --test 'lib/**/*.test.js'"
   },
   "devDependencies": {
-    "@pob/eslint-config": "65.5.0",
-    "@pob/root": "24.3.0",
-    "check-package-dependencies": "11.6.0",
+    "@pob/root": "27.1.0",
     "eslint": "10.8.0"
   },
   "commitlint": {

@@ -1,3 +1,6 @@
-import pobConfig from "@pob/eslint-config";
+import pobConfig from "@pob/root/eslint-config";
 
-export default [...pobConfig(import.meta.url).configs.nodeModule];
+export default [
+  ...pobConfig.configs.nodeModule,
+  ...pobConfig.configs.checkPackages,
+];
