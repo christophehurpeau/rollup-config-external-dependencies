@@ -27,8 +27,8 @@
     "lint:eslint": "eslint --quiet .",
     "prepare": "pob-root-postinstall",
     "test": "TZ=UTC node --test 'lib/**/*.test.js'",
-    "test:coverage": "TZ=UTC npx c8 --all --src ./lib node --test 'lib/**/*.test.js'",
-    "test:coverage:generate": "TZ=UTC npx c8 --reporter=json --all --src ./lib node --test 'lib/**/*.test.js'",
+    "test:coverage": "TZ=UTC node --test --experimental-test-coverage --test-coverage-include=\"lib/**/*.ts\" 'lib/**/*.test.js'",
+    "test:coverage:generate": "mkdir -p docs && TZ=UTC node --test --experimental-test-coverage --test-reporter=spec --test-reporter-destination=stdout --test-reporter=lcov --test-reporter-destination=docs/coverage.lcov --test-coverage-include=\"lib/**/*.ts\" 'lib/**/*.test.js'",
     "test:watch": "TZ=UTC node --test 'lib/**/*.test.js'"
   },
   "devDependencies": {
