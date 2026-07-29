@@ -34,7 +34,7 @@
     "test:watch": "TZ=UTC node --test lib/**/*.test.js"
   },
   "devDependencies": {
-    "@pob/eslint-config": "65.5.0",
+    "@pob/eslint-config": "67.1.0",
     "@pob/root": "24.3.0",
     "check-package-dependencies": "11.6.0",
     "eslint": "10.8.0"
