@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "@pob/root": "27.1.0",
-    "eslint": "10.8.0"
+    "eslint": "10.8.1"
   },
   "commitlint": {
     "extends": [
