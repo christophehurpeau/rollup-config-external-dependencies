@@ -23,22 +23,31 @@
   "scripts": {
     "format": "oxfmt",
     "format:check": "oxfmt --check .",
-    "lint": "pnpm run format && pnpm run lint:eslint",
+    "lint": "pnpm run format && pnpm run lint:oxlint && pnpm run lint:eslint",
     "lint:eslint": "eslint --quiet .",
+    "lint:oxlint": "oxlint --quiet",
     "prepare": "pob-root-postinstall",
     "test": "TZ=UTC node --test 'lib/**/*.test.js'",
     "test:coverage": "TZ=UTC node --test --experimental-test-coverage --test-coverage-include=\"lib/**/*.ts\" 'lib/**/*.test.js'",
-    "test:coverage:generate": "mkdir -p docs && TZ=UTC node --test --experimental-test-coverage --test-reporter=spec --test-reporter-destination=stdout --test-reporter=lcov --test-reporter-destination=docs/coverage.lcov --test-coverage-include=\"lib/**/*.ts\" 'lib/**/*.test.js'",
+    "test:coverage:generate": "mkdir -p generated-docs && TZ=UTC node --test --experimental-test-coverage --test-reporter=spec --test-reporter-destination=stdout --test-reporter=lcov --test-reporter-destination=generated-docs/coverage.lcov --test-coverage-include=\"lib/**/*.ts\" 'lib/**/*.test.js'",
     "test:watch": "TZ=UTC node --test 'lib/**/*.test.js'"
   },
   "devDependencies": {
-    "@pob/root": "27.1.0",
+    "@pob/eslint-config": "67.12.0",
+    "@pob/root": "27.15.0",
     "eslint": "10.8.1"
   },
   "commitlint": {
     "extends": [
       "@pob/root/commitlint-config"
     ]
+  },
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "^12.0.0",
+      "onFail": "ignore"
+    }
   },
   "engines": {
     "node": ">=22.18.0"
