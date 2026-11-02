@@ -1,3 +1,3 @@
 import pobConfig from "@pob/eslint-config";
 
-export default [...pobConfig.configs.nodeModule];
+export default [...pobConfig.configs.node];

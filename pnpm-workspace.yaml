@@ -2,7 +2,7 @@ allowBuilds:
   unrs-resolver: true
   esbuild: true
 dedupePeerDependents: true
-minimumReleaseAge: 4320
+minimumReleaseAge: 3600
 minimumReleaseAgeExclude:
   - "@pob/*"
   - pob
