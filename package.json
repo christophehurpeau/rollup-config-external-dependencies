@@ -28,12 +28,12 @@
     "lint:oxlint": "oxlint --quiet",
     "prepare": "pob-root-postinstall",
     "test": "TZ=UTC node --test 'lib/**/*.test.js'",
-    "test:coverage": "TZ=UTC node --test --experimental-test-coverage --test-coverage-include=\"lib/**/*.ts\" 'lib/**/*.test.js'",
-    "test:coverage:generate": "mkdir -p generated-docs && TZ=UTC node --test --experimental-test-coverage --test-reporter=spec --test-reporter-destination=stdout --test-reporter=lcov --test-reporter-destination=generated-docs/coverage.lcov --test-coverage-include=\"lib/**/*.ts\" 'lib/**/*.test.js'",
+    "test:coverage": "TZ=UTC node --test --experimental-test-coverage --test-coverage-include=\"lib/**/*.js\" 'lib/**/*.test.js'",
+    "test:coverage:generate": "mkdir -p generated-docs && TZ=UTC node --test --experimental-test-coverage --test-reporter=spec --test-reporter-destination=stdout --test-reporter=lcov --test-reporter-destination=generated-docs/coverage.lcov --test-coverage-include=\"lib/**/*.js\" 'lib/**/*.test.js'",
     "test:watch": "TZ=UTC node --test 'lib/**/*.test.js'"
   },
   "devDependencies": {
-    "@pob/eslint-config": "68.0.0",
+    "@pob/eslint-config": "68.3.0",
     "@pob/root": "28.6.0",
     "eslint": "10.14.0"
   },
@@ -50,7 +50,7 @@
     }
   },
   "engines": {
-    "node": ">=22.18.0"
+    "node": "^22.18.0 || >=24.14.1"
   },
   "pob": {}
 }
