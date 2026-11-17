@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "@pob/eslint-config": "68.5.0",
-    "@pob/root": "28.8.0",
+    "@pob/root": "28.8.1",
     "eslint": "10.14.0"
   },
   "commitlint": {
